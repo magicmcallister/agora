@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtualenvs / uv
+.venv/
+venv/
+
+# Env
+.env
+*.env
+!.env.example
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Docker / local data
+pgdata/
