@@ -1,28 +1,27 @@
 # Agora
 
-Backend de e-commerce construido con **DDD + Arquitectura Hexagonal** en
-Python/FastAPI. Monorepo con varios *bounded contexts* desplegables de forma
-independiente, comunicados por eventos de dominio. Despliegue 100% local con
-Docker Compose (sin infraestructura cloud).
+E-commerce backend built with **DDD + Hexagonal Architecture** in Python/FastAPI.
+A monorepo of several independently deployable *bounded contexts* that
+communicate through domain events. 100% local deployment with Docker Compose
+(no cloud infrastructure).
 
 ## Bounded contexts
 
-| Contexto | Responsabilidad | Agregados |
+| Context | Responsibility | Aggregates |
 |---|---|---|
-| `identity` | Usuarios, autenticación, perfiles de cliente | `User`, `Customer` |
-| `orders` | Catálogo, carrito, pedidos, cupones | `Product`, `Category`, `Cart`, `Order`, `Coupon` |
-| `notifications` | Avisos generados a partir de eventos | `Notification`, `NotificationTemplate` |
+| `identity` | Users, authentication, customer profiles | `User`, `Customer` |
+| `orders` | Catalog, cart, orders, coupons | `Product`, `Category`, `Cart`, `Order`, `Coupon` |
+| `notifications` | Alerts generated from domain events | `Notification`, `NotificationTemplate` |
 
-Librerías compartidas:
+Shared libraries:
 
 - `shared` — kernel: `AggregateRoot`, `DomainEvent`, `EventBus`, `Criteria`,
-  value objects base, `SQLAlchemyDatabase`.
-- `authorization` — RBAC/JWT stateless.
+  base value objects, `SQLAlchemyDatabase`.
+- `authorization` — stateless RBAC/JWT.
 
-## Estado
+## Status
 
-En diseño. El documento de diseño está en
-[`docs/superpowers/specs/2026-06-15-agora-backend-design.md`](docs/superpowers/specs/2026-06-15-agora-backend-design.md).
+Under development.
 
 ## Stack
 

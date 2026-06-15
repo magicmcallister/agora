@@ -26,3 +26,6 @@ venv/
 
 # Docker / local data
 pgdata/
+
+# Local-only planning artifacts (specs & plans)
+docs/superpowers/
